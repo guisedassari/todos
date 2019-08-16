@@ -1,4 +1,3 @@
-
 var listElement = document.querySelector('#app ul');
 var inputElement = document.querySelector('#app input');
 var buttonElement = document.querySelector('#app button');
@@ -15,7 +14,7 @@ function renderTodos() {
 		linkElement.setAttribute('href', '#');
 
 		var position = todos.indexOf(todo);
-		linkElement.setAttribute('onclick', 'deleteTodo('+ position +')');		
+		linkElement.setAttribute('onclick', 'deleteTodo(' + position + ')');
 
 		var linkText = document.createTextNode(' Excluir');
 
@@ -39,7 +38,9 @@ function addTodos() {
 	saveToStorage()
 }
 
+
 buttonElement.onclick = addTodos;
+
 
 function deleteTodo(position) {
 	todos.splice(position, 1);
